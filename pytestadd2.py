@@ -3,11 +3,19 @@ import sys
 def add(a, b):
     return a + b
 
-if _name_ == "_main_":
+def main():
     if len(sys.argv) != 3:
-        print("Usage: python script.py <num1> <num2>")
+        print("Usage: python addition.py <num1> <num2>")
         sys.exit(1)
-    
-    x = int(sys.argv[1])
-    y = int(sys.argv[2])
-    print("Sum:", add(x, y))
+
+    try:
+        x = float(sys.argv[1])
+        y = float(sys.argv[2])
+    except ValueError:
+        print("Error: Inputs must be numbers.")
+        sys.exit(1)
+
+    print("Sum:", add(x, y))
+
+if __name_ == "__main__":
+    main()
