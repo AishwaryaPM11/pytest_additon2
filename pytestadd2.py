@@ -1,5 +1,5 @@
 import sys
-def add(a, b):
+def addition(a, b):
     return a + b
 
 if _name_ == "_main_":
